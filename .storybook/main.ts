@@ -8,6 +8,9 @@ const config: StorybookConfig = {
     "@chromatic-com/storybook",
     "@storybook/addon-a11y"
   ],
+  core: {
+    builder: '@storybook/builder-vite',
+  },
   framework: {
     name: "@storybook/web-components-vite",
     options: {},
