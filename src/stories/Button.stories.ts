@@ -20,6 +20,12 @@ export const Primary: Story = {
     primary: true,
     label: 'Button',
   },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/GIyivL3AeBjiTc8zTtXzx5/Frontend-EOI?type=design&node-id=1-1892&mode=design&t=ZZG9mjhYElLEM0Fq-4",
+    },
+  },
 };
 
 export const Secondary: Story = {

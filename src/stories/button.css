@@ -1,4 +1,8 @@
 :root {
+  --font__base: 'Roboto', 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font__weight: 500;
+  --font__size: 16px;
+  --line__height: 25px;
   /* PRIMARY */
   --primary__background--base: var(--gray-1000);
   --primary__background--hover: var(--gray-800);
@@ -9,16 +13,18 @@
   --secondary__color: var(--gray-1100)
 }
 
-/* TODO: */
 .storybook-button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
-  border-radius: 2em;
+  font-size: var(--font__size);
   cursor: pointer;
   display: inline-block;
-  line-height: 1;
+  line-height: var(--line__height);
   padding: 12px 20px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  font-family: var(--font__base);
+  font-weight: var(--font__weight);
 }
 
 .storybook-button--primary {
@@ -31,7 +37,10 @@
 }
 
 .storybook-button--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  color: var(--secondary__color);
+  background-color: var(--secondary__background--base);
+}
+
+.storybook-button--secondary:hover {
+  background-color: var(--secondary__background--hover);
 }

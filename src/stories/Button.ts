@@ -13,22 +13,20 @@ export class ButtonProps {
   /**
    * Optional click handler
    */
-  onClick?(): void {
-    console.log(this);
+  onClick?(): void
 
-  }
 }
 
 /**
  * Primary UI component for user interaction
  */
 export const Button = ({ primary, label, onClick }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const mode = primary ? `storybook-button--primary` : 'storybook-button--secondary';
 
   return html`
     <button
       type="button"
-      class="${mode}"
+      class="storybook-button ${mode}"
       @click=${onClick}
     >
       ${label}
