@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/web-components';
 import { fn } from '@storybook/test';
+import type { Meta, StoryObj } from '@storybook/web-components';
 import type { ButtonProps } from './Button';
 import { Button } from './Button';
 
@@ -8,13 +8,6 @@ const meta = {
   title: 'Example/Button',
   tags: ['autodocs'],
   render: (args) => Button(args),
-  argTypes: {
-    backgroundColor: { control: 'color' },
-    size: {
-      control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
-    },
-  },
   args: { onClick: fn() },
 } satisfies Meta<ButtonProps>;
 
@@ -31,20 +24,6 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
   args: {
-    label: 'Button',
-  },
-};
-
-export const Large: Story = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
-
-export const Small: Story = {
-  args: {
-    size: 'small',
     label: 'Button',
   },
 };
